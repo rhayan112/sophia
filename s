@@ -1,3 +1,9 @@
+Get-ChildItem C:\ -Recurse -Filter Sophia.ps1 -ErrorAction SilentlyContinue
+
+
+
+
+
 powershell -ExecutionPolicy Bypass -File "C:\Users\marce\Downloads\Sophia_Script_for_Windows_10_Latest\Sophia.ps1"
 
 
