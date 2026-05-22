@@ -1,3 +1,9 @@
+powershell -ExecutionPolicy Bypass -File "C:\Users\marce\Downloads\Sophia_Script_for_Windows_10_Latest\Sophia.ps1"
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 
 cd $HOME\Downloads
