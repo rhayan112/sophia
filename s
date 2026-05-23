@@ -1,36 +1,18 @@
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+mkdir C:\Sophia
 
-cd $HOME\Downloads
-
-Invoke-WebRequest -Uri "https://github.com/farag2/Sophia-Script-for-Windows/archive/refs/heads/master.zip" -OutFile "Sophia.zip"
+cd C:\Sophia
 
 
-Expand-Archive -Path ".\Sophia.zip" -DestinationPath ".\Sophia" -Force
+Invoke-WebRequest -Uri "https://github.com/farag2/Sophia-Script-for-Windows/releases/download/7.1.5/Sophia.Script.for.Windows.10.v6.1.5.zip" -OutFile "Sophia.zip"
 
 
-cd ".\Sophia\Sophia-Script-for-Windows-main"
+Expand-Archive -Path ".\Sophia.zip" -DestinationPath ".\Extracted" -Force
+
+
+cd ".\Extracted\Sophia_Script_for_Windows_10_v6.1.5"
 
 
 Get-ChildItem -Recurse | Unblock-File
 
 
-cd .\Scripts
-
-
-dir
-
-
 powershell -ExecutionPolicy Bypass -File .\Sophia.ps1
-
-ou
-
-powershell -ExecutionPolicy Bypass -File .\Sophia_Script.ps1
-
-
-
-
-
-_____________________________________________________________________________________________________________________________
-$script = Get-ChildItem -Recurse -Filter "*.ps1" | Where-Object { $_.Name -match "Sophia" } | Select-Object -First 1
-
-powershell -ExecutionPolicy Bypass -File $script.FullName
